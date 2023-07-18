@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F78491EB-BCFA-4CB4-A0C0-071986A81536}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Machine_GUI</RootNamespace>
+    <AssemblyName>Machine_GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ALARM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ALARM.Designer.cs">
+      <DependentUpon>ALARM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ALREC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ALREC.Designer.cs">
+      <DependentUpon>ALREC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="COR.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="COR.Designer.cs">
+      <DependentUpon>COR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CUR.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CUR.Designer.cs">
+      <DependentUpon>CUR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EJE.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EJE.Designer.cs">
+      <DependentUpon>EJE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FUC.Designer.cs">
+      <DependentUpon>FUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IN2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IN2.Designer.cs">
+      <DependentUpon>IN2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="INJ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="INJ.Designer.cs">
+      <DependentUpon>INJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KEY1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KEY1.Designer.cs">
+      <DependentUpon>KEY1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KEY2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KEY2.Designer.cs">
+      <DependentUpon>KEY2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KEY3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KEY3.Designer.cs">
+      <DependentUpon>KEY3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KEY4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KEY4.Designer.cs">
+      <DependentUpon>KEY4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MEM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MEM.Designer.cs">
+      <DependentUpon>MEM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MOL.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MOL.Designer.cs">
+      <DependentUpon>MOL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MONIT1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MONIT1.Designer.cs">
+      <DependentUpon>MONIT1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MONIT2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MONIT2.Designer.cs">
+      <DependentUpon>MONIT2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OUT1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OUT1.Designer.cs">
+      <DependentUpon>OUT1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OUT2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OUT2.Designer.cs">
+      <DependentUpon>OUT2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRE.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PRE.Designer.cs">
+      <DependentUpon>PRE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prod.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Prod.Designer.cs">
+      <DependentUpon>Prod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Prog_Ver.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Prog_Ver.Designer.cs">
+      <DependentUpon>Prog_Ver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SCW.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SCW.Designer.cs">
+      <DependentUpon>SCW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SPC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SPC.Designer.cs">
+      <DependentUpon>SPC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TEMP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TEMP.Designer.cs">
+      <DependentUpon>TEMP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UNI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UNI.Designer.cs">
+      <DependentUpon>UNI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="REC.Designer.cs">
+      <DependentUpon>REC.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ALARM.resx">
+      <DependentUpon>ALARM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ALREC.resx">
+      <DependentUpon>ALREC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COR.resx">
+      <DependentUpon>COR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CUR.resx">
+      <DependentUpon>CUR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EJE.resx">
+      <DependentUpon>EJE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FUC.resx">
+      <DependentUpon>FUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IN2.resx">
+      <DependentUpon>IN2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="INJ.resx">
+      <DependentUpon>INJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KEY1.resx">
+      <DependentUpon>KEY1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KEY2.resx">
+      <DependentUpon>KEY2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KEY3.resx">
+      <DependentUpon>KEY3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KEY4.resx">
+      <DependentUpon>KEY4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MEM.resx">
+      <DependentUpon>MEM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MOL.resx">
+      <DependentUpon>MOL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MONIT1.resx">
+      <DependentUpon>MONIT1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MONIT2.resx">
+      <DependentUpon>MONIT2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OUT1.resx">
+      <DependentUpon>OUT1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OUT2.resx">
+      <DependentUpon>OUT2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRE.resx">
+      <DependentUpon>PRE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prod.resx">
+      <DependentUpon>Prod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prog_Ver.resx">
+      <DependentUpon>Prog_Ver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="REC.resx">
+      <DependentUpon>REC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SCW.resx">
+      <DependentUpon>SCW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SPC.resx">
+      <DependentUpon>SPC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TEMP.resx">
+      <DependentUpon>TEMP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UNI.resx">
+      <DependentUpon>UNI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
