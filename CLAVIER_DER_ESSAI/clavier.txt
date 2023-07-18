@@ -1,0 +1,18 @@
+chiffre 1 = 54
+chiffre 2 = 46
+chiffre 3 = 38
+ALPHA/NUM = 29
+chiffre 4 = 30
+chiffre 5 = 22
+chiffre 6 = 14
+SYMBOLE + = 21
+CHIFFRE 7 = 6
+CHIFFRE 8 = 61
+CHIFFRE 9 = 53
+SYMBOLE - = 13
+EFFACER   = 45
+CHIFFRE 0 = 62
+ENTER     = 37
+
+
+
