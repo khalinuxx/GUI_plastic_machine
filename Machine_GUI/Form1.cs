@@ -154,9 +154,12 @@ namespace Machine_GUI
             serialPort1.Open();
 
             //arduino reset
-           /* serialPort1.DtrEnable = true;
-            Thread.Sleep(500);
-            serialPort1.DtrEnable = false;*/
+            /* serialPort1.DtrEnable = true;
+             Thread.Sleep(500);
+             serialPort1.DtrEnable = false;*/
+            //mol1.Visible = true;
+          //  temp1.Visible = true;
+
 
         }
 
@@ -453,11 +456,15 @@ namespace Machine_GUI
 
         private void button3_Click(object sender, EventArgs e)
         {
+           
+            //serialPort1.Write("t1 100");
             FUNC_HIDE();
             INOUT_HIDE();
             KEY_HIDE();
             INJ_HIDE();
             MOUL_HIDE();
+            temp1.Visible = true;
+            serialPort1.Write("t1 150");
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -905,6 +912,7 @@ namespace Machine_GUI
                          if (Key)
                          {
                              prog_Ver1.Visible = true;
+                            prog_Ver1.textBox18.Focus();
 
                             keY11.Visible = false;
                             keY21.Visible = false;
@@ -965,6 +973,10 @@ namespace Machine_GUI
                 case 'x':
                     SendKeys.SendWait("{BS}");
                     // SendKeys.Send("{B}");
+                    break;
+                case 'h':
+                    SendKeys.Send("{ENTER}");
+                    
                     break;
                 case 'A':
                     SendKeys.Send("{A}");

@@ -12,9 +12,12 @@ namespace Machine_GUI
 {
     public partial class EJE : UserControl
     {
+        private int comboBox2Focused = 0, comboBox1Focused = 0;
         public EJE()
         {
             InitializeComponent();
+            comboBox1.SelectedIndex = 0;
+            comboBox2.SelectedIndex = 0;
         }
 
      
@@ -341,7 +344,7 @@ namespace Machine_GUI
             if (e.KeyCode.Equals(Keys.Down))
             {
                 e.Handled = true;
-                textBox22.Focus();
+                comboBox1.Focus();
             }
             if (e.KeyCode.Equals(Keys.Right))
             {
@@ -365,7 +368,7 @@ namespace Machine_GUI
             if (e.KeyCode.Equals(Keys.Down))
             {
                 e.Handled = true;
-                textBox21.Focus();
+                comboBox2.Focus();
             }
             if (e.KeyCode.Equals(Keys.Right))
             {
@@ -389,7 +392,7 @@ namespace Machine_GUI
             if (e.KeyCode.Equals(Keys.Down))
             {
                 e.Handled = true;
-                textBox21.Focus();
+                comboBox2.Focus();
             }
             if (e.KeyCode.Equals(Keys.Right))
             {
@@ -413,7 +416,7 @@ namespace Machine_GUI
             if (e.KeyCode.Equals(Keys.Down))
             {
                 e.Handled = true;
-                textBox22.Focus();
+                comboBox1.Focus();
             }
             if (e.KeyCode.Equals(Keys.Right))
             {
@@ -427,60 +430,12 @@ namespace Machine_GUI
             }
         }
 
-        private void textBox21_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode.Equals(Keys.Up))
-            {
-                e.Handled = true;
-                textBox18.Focus();
-            }
-            if (e.KeyCode.Equals(Keys.Down))
-            {
-                e.Handled = true;
-                textBox23.Focus();
-            }
-            if (e.KeyCode.Equals(Keys.Right))
-            {
-                e.Handled = true;
-                textBox22.Focus();
-            }
-            if (e.KeyCode.Equals(Keys.Left))
-            {
-                e.Handled = true;
-                textBox22.Focus();
-            }
-        }
-
-        private void textBox22_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode.Equals(Keys.Up))
-            {
-                e.Handled = true;
-                textBox16.Focus();
-            }
-            if (e.KeyCode.Equals(Keys.Down))
-            {
-                e.Handled = true;
-                textBox24.Focus();
-            }
-            if (e.KeyCode.Equals(Keys.Right))
-            {
-                e.Handled = true;
-                textBox21.Focus();
-            }
-            if (e.KeyCode.Equals(Keys.Left))
-            {
-                e.Handled = true;
-                textBox21.Focus();
-            }
-        }
-
         private void textBox23_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode.Equals(Keys.Up))
             {
                 e.Handled = true;
-                textBox21.Focus();
+                comboBox2.Focus();
             }
             if (e.KeyCode.Equals(Keys.Down))
             {
@@ -504,7 +459,7 @@ namespace Machine_GUI
             if (e.KeyCode.Equals(Keys.Up))
             {
                 e.Handled = true;
-                textBox22.Focus();
+                comboBox1.Focus();
             }
             if (e.KeyCode.Equals(Keys.Down))
             {
@@ -557,7 +512,7 @@ namespace Machine_GUI
             if (e.KeyCode.Equals(Keys.Down))
             {
                 e.Handled = true;
-                textBox22.Focus();
+                comboBox1.Focus();
             }
             if (e.KeyCode.Equals(Keys.Right))
             {
@@ -568,6 +523,140 @@ namespace Machine_GUI
             {
                 e.Handled = true;
                 textBox16.Focus();
+            }
+        }
+
+
+        private void Pressure_TextChange(object sender, EventArgs e)
+        {
+            if (sender is TextBox textBox)
+            {
+
+                int box_num = 0;
+                Int32.TryParse(textBox.Text, out box_num);
+                if ((box_num < 0) && (textBox1.Text != ""))
+                {
+                    textBox.Text = "0";
+
+                }
+                else if ((box_num > 150) && (textBox.Text != ""))
+                {
+
+                    textBox.Text = "150";
+                }
+                else
+                { //Do nothing
+                }
+            }
+        }
+
+        private void speed_TextChange(object sender, EventArgs e)
+        {
+            if (sender is TextBox textBox)
+            {
+
+                int box_num = 0;
+                Int32.TryParse(textBox.Text, out box_num);
+                if ((box_num < 0) && (textBox1.Text != ""))
+                {
+                    textBox.Text = "0";
+
+                }
+                else if ((box_num > 100) && (textBox.Text != ""))
+                {
+
+                    textBox.Text = "100";
+                }
+                else
+                { //Do nothing
+                }
+            }
+        }
+
+        private void NUMONLY_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+
+        private void comboBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.Enter))
+            {
+                comboBox2Focused = 1- comboBox2Focused;
+                comboBox2.SelectedIndex = comboBox2Focused;
+
+            }
+
+                if (e.KeyCode.Equals(Keys.Up))
+                {
+
+                    e.Handled = true;
+                    textBox18.Focus();
+
+                }
+                if (e.KeyCode.Equals(Keys.Down))
+                {
+
+                    e.Handled = true;
+                    textBox23.Focus();
+                }
+            
+            if (e.KeyCode.Equals(Keys.Right))
+            {
+                e.Handled = true;
+                comboBox1.Focus();
+               
+             
+            }
+            if (e.KeyCode.Equals(Keys.Left))
+            {
+                e.Handled = true;
+                comboBox1.Focus();
+               
+               
+            }
+        }
+
+
+
+        private void comboBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.Enter))
+            {
+                comboBox1Focused = 1- comboBox1Focused ;
+                comboBox1.SelectedIndex = comboBox1Focused;
+
+            }
+
+                if (e.KeyCode.Equals(Keys.Up))
+                {
+
+                    e.Handled = true;
+                    textBox16.Focus();
+
+                }
+                if (e.KeyCode.Equals(Keys.Down))
+                {
+
+                    e.Handled = true;
+                    textBox24.Focus();
+                }
+            
+            if (e.KeyCode.Equals(Keys.Right))
+            {
+                e.Handled = true;
+                comboBox2.Focus();
+          
+            }
+            if (e.KeyCode.Equals(Keys.Left))
+            {
+                e.Handled = true;
+                comboBox2.Focus();
+           
             }
         }
     }

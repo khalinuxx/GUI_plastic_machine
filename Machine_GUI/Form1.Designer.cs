@@ -41,7 +41,7 @@
             this.moule = new System.Windows.Forms.Label();
             this.cur1 = new Machine_GUI.CUR();
             this.pre1 = new Machine_GUI.PRE();
-            this.temp1 = new Machine_GUI.TEMP();
+            this.temp1 = new Machine_GUI.TEMP(this.serialPort1);
             this.scw1 = new Machine_GUI.SCW();
             this.keY11 = new Machine_GUI.KEY1();
             this.prod1 = new Machine_GUI.Prod();
@@ -60,7 +60,7 @@
             this.cor1 = new Machine_GUI.COR();
             this.eje1 = new Machine_GUI.EJE();
             this.uni1 = new Machine_GUI.UNI();
-            this.mol1 = new Machine_GUI.MOL();
+            this.mol1 = new Machine_GUI.MOL(this.serialPort1);
             this.alrec1 = new Machine_GUI.ALREC();
             this.alarm1 = new Machine_GUI.ALARM();
             this.spc1 = new Machine_GUI.SPC();
@@ -93,6 +93,7 @@
             // 
             // serialPort1
             // 
+            this.serialPort1.BaudRate = 115200;
             this.serialPort1.PortName = "COM15";
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
@@ -439,6 +440,7 @@
         }
 
         #endregion
+        public System.IO.Ports.SerialPort serialPort1;
         private UserControl1 userControl11;
         private IN2 iN21;
         private OUT1 ouT11;
@@ -463,7 +465,6 @@
         private EJE eje1;
         private MOL mol1;
         private UNI uni1;
-        private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.ComboBox comPort;
         private MONIT1 moniT11;
         private MONIT2 moniT21;
@@ -476,6 +477,7 @@
         private System.Windows.Forms.Label keys;
         private System.Windows.Forms.Label Inje;
         private System.Windows.Forms.Label moule;
+        
     }
 }
 

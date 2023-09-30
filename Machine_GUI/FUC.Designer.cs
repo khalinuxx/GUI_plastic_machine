@@ -49,11 +49,11 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // textBox4
@@ -118,8 +118,8 @@
             this.textBox22.Name = "textBox22";
             this.textBox22.Size = new System.Drawing.Size(100, 20);
             this.textBox22.TabIndex = 5;
-            this.textBox22.Text = "*****";
             this.textBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox22.UseSystemPasswordChar = true;
             this.textBox22.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox22_KeyDown);
             // 
             // textBox23
@@ -284,65 +284,90 @@
             this.label11.TabIndex = 23;
             this.label11.Text = "SPEED";
             // 
-            // label12
+            // comboBox1
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.White;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(197, 88);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(30, 13);
-            this.label12.TabIndex = 23;
-            this.label12.Text = "OFF";
+            this.comboBox1.BackColor = System.Drawing.Color.White;
+            this.comboBox1.DisplayMember = "TIME";
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "ON",
+            "OFF"});
+            this.comboBox1.Location = new System.Drawing.Point(184, 83);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(63, 21);
+            this.comboBox1.TabIndex = 62;
+            this.comboBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox1_KeyDown);
             // 
-            // label13
+            // comboBox2
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.White;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(197, 117);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(30, 13);
-            this.label13.TabIndex = 23;
-            this.label13.Text = "OFF";
+            this.comboBox2.BackColor = System.Drawing.Color.White;
+            this.comboBox2.DisplayMember = "TIME";
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "ON",
+            "OFF"});
+            this.comboBox2.Location = new System.Drawing.Point(184, 110);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(63, 21);
+            this.comboBox2.TabIndex = 62;
+            this.comboBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox2_KeyDown);
             // 
-            // label14
+            // comboBox3
             // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.White;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(197, 143);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(30, 13);
-            this.label14.TabIndex = 23;
-            this.label14.Text = "OFF";
+            this.comboBox3.BackColor = System.Drawing.Color.White;
+            this.comboBox3.DisplayMember = "TIME";
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "ON",
+            "OFF"});
+            this.comboBox3.Location = new System.Drawing.Point(184, 140);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(63, 21);
+            this.comboBox3.TabIndex = 62;
+            this.comboBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox3_KeyDown);
             // 
-            // label15
+            // comboBox4
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.White;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(197, 181);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(30, 13);
-            this.label15.TabIndex = 23;
-            this.label15.Text = "OFF";
+            this.comboBox4.BackColor = System.Drawing.Color.White;
+            this.comboBox4.DisplayMember = "TIME";
+            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "ON",
+            "OFF"});
+            this.comboBox4.Location = new System.Drawing.Point(184, 181);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(63, 21);
+            this.comboBox4.TabIndex = 62;
+            this.comboBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox4_KeyDown);
             // 
-            // label16
+            // comboBox5
             // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.White;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(197, 237);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(30, 13);
-            this.label16.TabIndex = 23;
-            this.label16.Text = "OFF";
+            this.comboBox5.BackColor = System.Drawing.Color.White;
+            this.comboBox5.DisplayMember = "TIME";
+            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Items.AddRange(new object[] {
+            "ON",
+            "OFF"});
+            this.comboBox5.Location = new System.Drawing.Point(184, 229);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(63, 21);
+            this.comboBox5.TabIndex = 62;
+            this.comboBox5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox5_KeyDown);
             // 
             // FUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.comboBox5);
+            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -353,11 +378,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox22);
@@ -392,16 +412,16 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
         public System.Windows.Forms.TextBox textBox4;
         public System.Windows.Forms.TextBox textBox8;
         public System.Windows.Forms.TextBox textBox14;
         public System.Windows.Forms.TextBox textBox18;
         public System.Windows.Forms.TextBox textBox20;
         public System.Windows.Forms.TextBox textBox22;
+        public System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.ComboBox comboBox2;
+        public System.Windows.Forms.ComboBox comboBox3;
+        public System.Windows.Forms.ComboBox comboBox4;
+        public System.Windows.Forms.ComboBox comboBox5;
     }
 }

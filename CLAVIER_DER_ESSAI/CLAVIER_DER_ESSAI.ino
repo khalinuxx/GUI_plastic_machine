@@ -13,19 +13,14 @@ const int numCols = 8;       // Nombre de colonnes du clavier
 unsigned long LastTime = 0;  // contain the time for the last click
 bool NUM = true;
 char win = 'a';
-char chif1 = 'A';
-char chif2 = 'D';
+
 char chif3 ;
-char chif4 = 'J';
-char chif5 = 'M';
-char chif6 = 'P';
-char chif7 = 'S';
-char chif8 = 'V';
-char chif9 = 'Y';
+
 int Lastbutton;
 // Broches de connexion des lignes et des colonnes du clavier
 int rowPins[numRows] = {36, 34, 32, 30, 28, 26, 24, 22};
 int colPins[numCols] = {52, 50, 48, 46, 47, 49, 51, 53};
+char x[6]={0};
 
 const char* buttonNames[numRows][numCols] = {
   {"Button 1", "Button 2", "PORTILLON FERMER", "EPAISSEUR MOULE -", "Button 5", "Button 6", "CHIFFRE 7", "Button 8"},
@@ -39,13 +34,14 @@ const char* buttonNames[numRows][numCols] = {
 
   {"BOUTON", "MANUEL", "INJECTION", "OUVERTURE MOULE", "yH"/*Butoon HAUT*/, "CHIFFRE 8", "CHIFFRE 0", "MENU"}
 };
-
+String R="R";
 
 void setup() {
   // put your setup code here, to run once:
-  Serial.begin(9600);
-  Serial.println("CLAVIER ROCKLAND");
-
+  Serial.begin(115200);
+  //Serial.println("CLAVIER ROCKLAND");
+  pinMode(13,OUTPUT);
+digitalWrite(13,0);
   for (int i = 0; i < numRows; i++) {
     pinMode(rowPins[i], OUTPUT);
     digitalWrite(rowPins[i], HIGH);  // Désactive les résistances de pull-up
@@ -65,6 +61,21 @@ void setup() {
 
 
 void loop() {
+
+
+if (Serial.available()) {
+char Msg = Serial.read();
+    if(Msg=='R')
+    {
+    Serial.println('a');
+    
+    }
+}
+
+
+
+
+  
   // Parcours des lignes
   for (int row = 0; row < numRows; row++) {
     // Active la ligne actuelle
@@ -177,6 +188,10 @@ void loop() {
         else if(buttonNames[row][col]=="EFFACER")
             {
               Serial.println('x');
+            }
+            else if(buttonNames[row][col]=="ENTER")
+            {
+              Serial.println('h');
             }
         else
         {

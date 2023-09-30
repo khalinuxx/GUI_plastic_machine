@@ -12,9 +12,15 @@ namespace Machine_GUI
 {
     public partial class MOL : UserControl
     {
-        public MOL()
+
+        private int comboBox2Focused = 0;
+        private System.IO.Ports.SerialPort serialPort1;
+        public MOL(System.IO.Ports.SerialPort serialPort1)
         {
             InitializeComponent();
+            comboBox2.SelectedIndex = 0;
+
+            this.serialPort1 = serialPort1;
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -264,6 +270,10 @@ namespace Machine_GUI
 
         private void textBox12_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode.Equals(Keys.Enter))
+            {
+                serialPort1.WriteLine("d1 " + textBox12.Text);
+            }
             if (e.KeyCode.Equals(Keys.Up))
             {
                 e.Handled = true;
@@ -272,7 +282,7 @@ namespace Machine_GUI
             if (e.KeyCode.Equals(Keys.Down))
             {
                 e.Handled = true;
-                textBox15.Focus();
+                comboBox2.Focus();
             }
             if (e.KeyCode.Equals(Keys.Right))
             {
@@ -288,6 +298,10 @@ namespace Machine_GUI
 
         private void textBox13_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode.Equals(Keys.Enter))
+            {
+                serialPort1.WriteLine("d2 " + textBox13.Text);
+            }
             if (e.KeyCode.Equals(Keys.Up))
             {
                 e.Handled = true;
@@ -312,6 +326,10 @@ namespace Machine_GUI
 
         private void textBox14_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode.Equals(Keys.Enter))
+            {
+                serialPort1.WriteLine("d3 " + textBox14.Text);
+            }
             if (e.KeyCode.Equals(Keys.Up))
             {
                 e.Handled = true;
@@ -339,7 +357,7 @@ namespace Machine_GUI
             if (e.KeyCode.Equals(Keys.Up))
             {
                 e.Handled = true;
-                textBox15.Focus();
+                comboBox2.Focus();
             }
             if (e.KeyCode.Equals(Keys.Down))
             {
@@ -363,7 +381,7 @@ namespace Machine_GUI
             if (e.KeyCode.Equals(Keys.Up))
             {
                 e.Handled = true;
-                textBox15.Focus();
+                comboBox2.Focus();
             }
             if (e.KeyCode.Equals(Keys.Down))
             {
@@ -530,6 +548,10 @@ namespace Machine_GUI
 
         private void textBox25_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode.Equals(Keys.Enter))
+            {
+                serialPort1.WriteLine("d4 " + textBox25.Text);
+            }
             if (e.KeyCode.Equals(Keys.Up))
             {
                 e.Handled = true;
@@ -554,6 +576,10 @@ namespace Machine_GUI
 
         private void textBox26_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode.Equals(Keys.Enter))
+            {
+                serialPort1.WriteLine("d5 " + textBox26.Text);
+            }
             if (e.KeyCode.Equals(Keys.Up))
             {
                 e.Handled = true;
@@ -578,6 +604,10 @@ namespace Machine_GUI
 
         private void textBox27_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode.Equals(Keys.Enter))
+            {
+                serialPort1.WriteLine("d6 " + textBox27.Text);
+            }
             if (e.KeyCode.Equals(Keys.Up))
             {
                 e.Handled = true;
@@ -602,6 +632,10 @@ namespace Machine_GUI
 
         private void textBox28_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode.Equals(Keys.Enter))
+            {
+                serialPort1.WriteLine("d7 " + textBox28.Text);
+            }
             if (e.KeyCode.Equals(Keys.Up))
             {
                 e.Handled = true;
@@ -624,29 +658,6 @@ namespace Machine_GUI
             }
         }
 
-        private void textBox15_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode.Equals(Keys.Up))
-            {
-                e.Handled = true;
-                textBox12.Focus();
-            }
-            if (e.KeyCode.Equals(Keys.Down))
-            {
-                e.Handled = true;
-                textBox17.Focus();
-            }
-            if (e.KeyCode.Equals(Keys.Right))
-            {
-                e.Handled = true;
-                textBox16.Focus();
-            }
-            if (e.KeyCode.Equals(Keys.Left))
-            {
-                e.Handled = true;
-                textBox16.Focus();
-            }
-        }
 
         private void textBox16_KeyDown(object sender, KeyEventArgs e)
         {
@@ -663,12 +674,103 @@ namespace Machine_GUI
             if (e.KeyCode.Equals(Keys.Right))
             {
                 e.Handled = true;
-                textBox15.Focus();
+                comboBox2.Focus();
             }
             if (e.KeyCode.Equals(Keys.Left))
             {
                 e.Handled = true;
-                textBox15.Focus();
+                comboBox2.Focus();
+            }
+        }
+
+        private void Pressure_TextChange(object sender, EventArgs e)
+        {
+            if (sender is TextBox textBox)
+            {
+
+                int box_num = 0;
+                Int32.TryParse(textBox.Text, out box_num);
+                if ((box_num < 0) && (textBox1.Text != ""))
+                {
+                    textBox.Text = "0";
+
+                }
+                else if ((box_num > 150) && (textBox.Text != ""))
+                {
+
+                    textBox.Text = "150";
+                }
+                else
+                { //Do nothing
+                }
+            }
+        }
+
+        private void speed_TextChange(object sender, EventArgs e)
+        {
+            if (sender is TextBox textBox)
+            {
+
+                int box_num = 0;
+                Int32.TryParse(textBox.Text, out box_num);
+                if ((box_num < 0) && (textBox1.Text != ""))
+                {
+                    textBox.Text = "0";
+
+                }
+                else if ((box_num > 100) && (textBox.Text != ""))
+                {
+
+                    textBox.Text = "100";
+                }
+                else
+                { //Do nothing
+                }
+            }
+        }
+
+        private void NUMONLY_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void comboBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.Enter))
+            {
+                comboBox2Focused = 1-comboBox2Focused;
+                comboBox2.SelectedIndex = comboBox2Focused;
+
+            }
+
+                if (e.KeyCode.Equals(Keys.Up))
+                {
+
+                    e.Handled = true;
+                    textBox12.Focus();
+
+                }
+                if (e.KeyCode.Equals(Keys.Down))
+                {
+
+                    e.Handled = true;
+                    textBox17.Focus();
+                }
+            
+            if (e.KeyCode.Equals(Keys.Right))
+            {
+                e.Handled = true;
+                textBox16.Focus();
+             
+            }
+            if (e.KeyCode.Equals(Keys.Left))
+            {
+                e.Handled = true;
+                textBox16.Focus();
+                
             }
         }
     }

@@ -71,12 +71,12 @@
             this.label18 = new System.Windows.Forms.Label();
             this.textBox28 = new System.Windows.Forms.TextBox();
             this.textBox25 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
             this.textBox27 = new System.Windows.Forms.TextBox();
             this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
             this.textBox30 = new System.Windows.Forms.TextBox();
             this.textBox24 = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // textBox58
@@ -204,7 +204,9 @@
             this.textBox8.Size = new System.Drawing.Size(62, 20);
             this.textBox8.TabIndex = 46;
             this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox8.TextChanged += new System.EventHandler(this.speed_TextChange);
             this.textBox8.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox8_KeyDown);
+            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NUMONLY_KeyPress);
             // 
             // textBox7
             // 
@@ -213,7 +215,9 @@
             this.textBox7.Size = new System.Drawing.Size(62, 20);
             this.textBox7.TabIndex = 47;
             this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox7.TextChanged += new System.EventHandler(this.speed_TextChange);
             this.textBox7.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox7_KeyDown);
+            this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NUMONLY_KeyPress);
             // 
             // textBox4
             // 
@@ -222,7 +226,9 @@
             this.textBox4.Size = new System.Drawing.Size(62, 20);
             this.textBox4.TabIndex = 48;
             this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox4.TextChanged += new System.EventHandler(this.Pressure_TextChange);
             this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox4_KeyDown);
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NUMONLY_KeyPress);
             // 
             // textBox6
             // 
@@ -231,7 +237,9 @@
             this.textBox6.Size = new System.Drawing.Size(62, 20);
             this.textBox6.TabIndex = 49;
             this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox6.TextChanged += new System.EventHandler(this.speed_TextChange);
             this.textBox6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox6_KeyDown);
+            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NUMONLY_KeyPress);
             // 
             // textBox3
             // 
@@ -240,7 +248,9 @@
             this.textBox3.Size = new System.Drawing.Size(62, 20);
             this.textBox3.TabIndex = 50;
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox3.TextChanged += new System.EventHandler(this.Pressure_TextChange);
             this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NUMONLY_KeyPress);
             // 
             // textBox2
             // 
@@ -249,7 +259,9 @@
             this.textBox2.Size = new System.Drawing.Size(62, 20);
             this.textBox2.TabIndex = 51;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox2.TextChanged += new System.EventHandler(this.Pressure_TextChange);
             this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NUMONLY_KeyPress);
             // 
             // textBox5
             // 
@@ -258,7 +270,9 @@
             this.textBox5.Size = new System.Drawing.Size(62, 20);
             this.textBox5.TabIndex = 52;
             this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox5.TextChanged += new System.EventHandler(this.speed_TextChange);
             this.textBox5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox5_KeyDown);
+            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NUMONLY_KeyPress);
             // 
             // textBox1
             // 
@@ -267,7 +281,9 @@
             this.textBox1.Size = new System.Drawing.Size(62, 20);
             this.textBox1.TabIndex = 53;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.TextChanged += new System.EventHandler(this.Pressure_TextChange);
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NUMONLY_KeyPress);
             // 
             // textBox11
             // 
@@ -277,6 +293,7 @@
             this.textBox11.TabIndex = 48;
             this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox11.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox11_KeyDown);
+            this.textBox11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NUMONLY_KeyPress);
             // 
             // textBox12
             // 
@@ -286,6 +303,7 @@
             this.textBox12.TabIndex = 46;
             this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox12.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox12_KeyDown);
+            this.textBox12.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NUMONLY_KeyPress);
             // 
             // label8
             // 
@@ -315,6 +333,7 @@
             this.textBox10.TabIndex = 46;
             this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox10.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox10_KeyDown);
+            this.textBox10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NUMONLY_KeyPress);
             // 
             // label10
             // 
@@ -333,7 +352,9 @@
             this.textBox13.Size = new System.Drawing.Size(62, 20);
             this.textBox13.TabIndex = 53;
             this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox13.TextChanged += new System.EventHandler(this.Pressure_TextChange);
             this.textBox13.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox13_KeyDown);
+            this.textBox13.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NUMONLY_KeyPress);
             // 
             // textBox17
             // 
@@ -342,7 +363,9 @@
             this.textBox17.Size = new System.Drawing.Size(62, 20);
             this.textBox17.TabIndex = 52;
             this.textBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox17.TextChanged += new System.EventHandler(this.speed_TextChange);
             this.textBox17.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox17_KeyDown);
+            this.textBox17.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NUMONLY_KeyPress);
             // 
             // textBox14
             // 
@@ -351,7 +374,9 @@
             this.textBox14.Size = new System.Drawing.Size(62, 20);
             this.textBox14.TabIndex = 51;
             this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox14.TextChanged += new System.EventHandler(this.Pressure_TextChange);
             this.textBox14.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox14_KeyDown);
+            this.textBox14.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NUMONLY_KeyPress);
             // 
             // textBox15
             // 
@@ -360,7 +385,9 @@
             this.textBox15.Size = new System.Drawing.Size(62, 20);
             this.textBox15.TabIndex = 50;
             this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox15.TextChanged += new System.EventHandler(this.Pressure_TextChange);
             this.textBox15.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox15_KeyDown);
+            this.textBox15.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NUMONLY_KeyPress);
             // 
             // textBox18
             // 
@@ -369,7 +396,9 @@
             this.textBox18.Size = new System.Drawing.Size(62, 20);
             this.textBox18.TabIndex = 49;
             this.textBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox18.TextChanged += new System.EventHandler(this.speed_TextChange);
             this.textBox18.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox18_KeyDown);
+            this.textBox18.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NUMONLY_KeyPress);
             // 
             // textBox19
             // 
@@ -378,7 +407,9 @@
             this.textBox19.Size = new System.Drawing.Size(62, 20);
             this.textBox19.TabIndex = 47;
             this.textBox19.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox19.TextChanged += new System.EventHandler(this.speed_TextChange);
             this.textBox19.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox19_KeyDown);
+            this.textBox19.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NUMONLY_KeyPress);
             // 
             // label11
             // 
@@ -444,7 +475,9 @@
             this.textBox16.Size = new System.Drawing.Size(62, 20);
             this.textBox16.TabIndex = 50;
             this.textBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox16.TextChanged += new System.EventHandler(this.Pressure_TextChange);
             this.textBox16.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox16_KeyDown);
+            this.textBox16.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NUMONLY_KeyPress);
             // 
             // label17
             // 
@@ -463,6 +496,7 @@
             this.textBox20.TabIndex = 50;
             this.textBox20.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox20.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox20_KeyDown);
+            this.textBox20.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NUMONLY_KeyPress);
             // 
             // label18
             // 
@@ -492,16 +526,6 @@
             this.textBox25.Text = "PHO. TIME";
             this.textBox25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox21
-            // 
-            this.textBox21.Location = new System.Drawing.Point(186, 287);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(70, 20);
-            this.textBox21.TabIndex = 51;
-            this.textBox21.Text = "OFF";
-            this.textBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox21.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox21_KeyDown);
-            // 
             // textBox27
             // 
             this.textBox27.Location = new System.Drawing.Point(254, 287);
@@ -520,16 +544,6 @@
             this.textBox23.Text = "3.0";
             this.textBox23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox23.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox23_KeyDown);
-            // 
-            // textBox22
-            // 
-            this.textBox22.Location = new System.Drawing.Point(338, 287);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(70, 20);
-            this.textBox22.TabIndex = 48;
-            this.textBox22.Text = "OFF";
-            this.textBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox22.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox22_KeyDown);
             // 
             // textBox30
             // 
@@ -550,10 +564,42 @@
             this.textBox24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox24.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox24_KeyDown);
             // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.Color.White;
+            this.comboBox2.DisplayMember = "TIME";
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "ON",
+            "OFF"});
+            this.comboBox2.Location = new System.Drawing.Point(186, 287);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(63, 21);
+            this.comboBox2.TabIndex = 61;
+            this.comboBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox2_KeyDown);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.White;
+            this.comboBox1.DisplayMember = "TIME";
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "ON",
+            "OFF"});
+            this.comboBox1.Location = new System.Drawing.Point(338, 287);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(63, 21);
+            this.comboBox1.TabIndex = 63;
+            this.comboBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox1_KeyDown);
+            // 
             // EJE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
@@ -581,7 +627,6 @@
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox11);
             this.Controls.Add(this.textBox18);
-            this.Controls.Add(this.textBox22);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox20);
             this.Controls.Add(this.textBox16);
@@ -592,7 +637,6 @@
             this.Controls.Add(this.textBox27);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox17);
-            this.Controls.Add(this.textBox21);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox13);
             this.Controls.Add(this.textBox25);
@@ -657,9 +701,9 @@
         public System.Windows.Forms.TextBox textBox19;
         public System.Windows.Forms.TextBox textBox16;
         public System.Windows.Forms.TextBox textBox20;
-        public System.Windows.Forms.TextBox textBox21;
         public System.Windows.Forms.TextBox textBox23;
-        public System.Windows.Forms.TextBox textBox22;
         public System.Windows.Forms.TextBox textBox24;
+        public System.Windows.Forms.ComboBox comboBox2;
+        public System.Windows.Forms.ComboBox comboBox1;
     }
 }

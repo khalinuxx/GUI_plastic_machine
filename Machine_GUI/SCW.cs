@@ -549,5 +549,61 @@ namespace Machine_GUI
                 textBox19.Focus();
             }
         }
+
+        private void NUMONLY_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+
+        private void Pressure_TextChange(object sender, EventArgs e)
+        {
+            if (sender is TextBox textBox)
+            {
+
+                int box_num = 0;
+                Int32.TryParse(textBox.Text, out box_num);
+                if ((box_num < 0) && (textBox1.Text != ""))
+                {
+                    textBox.Text = "0";
+
+                }
+                else if ((box_num > 150) && (textBox.Text != ""))
+                {
+
+                    textBox.Text = "150";
+                }
+                else
+                { //Do nothing
+                }
+            }
+        }
+
+        private void speed_TextChange(object sender, EventArgs e)
+        {
+            if (sender is TextBox textBox)
+            {
+
+                int box_num = 0;
+                Int32.TryParse(textBox.Text, out box_num);
+                if ((box_num < 0) && (textBox1.Text != ""))
+                {
+                    textBox.Text = "0";
+
+                }
+                else if ((box_num > 100) && (textBox.Text != ""))
+                {
+
+                    textBox.Text = "100";
+                }
+                else
+                { //Do nothing
+                }
+            }
+        }
+
     }
 }
